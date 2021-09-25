@@ -87,10 +87,14 @@ video {
   vertical-align: baseline;
   box-sizing: border-box;
 }
+/* Hidding horizontal scroll: */
 html,
 body {
   max-width: 100%;
   overflow-x: hidden;
+}
+body {
+  position: relative;
 }
 /* HTML5 display-role reset for older browsers */
 article,

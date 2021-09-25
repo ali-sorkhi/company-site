@@ -50,7 +50,11 @@ const Wrapper = styled.div`
   height: 200px;
   left: 0px;
   top: 0px;
-  z-index: 1;
+  z-index: 100;
+
+  @media (max-width: 820px) {
+    visibility: hidden;
+  }
 `;
 
 const BG = styled.div`
