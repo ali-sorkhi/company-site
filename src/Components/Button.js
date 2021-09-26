@@ -35,14 +35,17 @@ const Wrapper = styled(Link)`
   /* Note: backdrop-filter has minimal browser support */
 
   border-radius: 50px;
+  transition-duration: 1s;
 
   :hover {
-    background: rgba(0, 48, 73, 0.2);
-    /* Neutral Gray */
-
-    border: 5px solid #353535;
+    background: rgba(0, 0, 0, 0.53);
+    border: 5px solid #003049;
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.25),
       inset 0px 4px 20px rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(50px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 50px;
   }
 `;
 
@@ -53,6 +56,7 @@ const Text = styled.p`
   font-size: 40px;
   line-height: 40px;
   text-align: right;
+  transition-duration: 1s;
 
   color: #000000;
   ${Wrapper}:hover & {

@@ -1,17 +1,36 @@
 import React from "react";
-import styled from "styled-components";
+import { Link } from "react-router-dom";
+import styled, { keyframes } from "styled-components";
 
-export default function More() {
+export default function More(props) {
   return (
     <Wrapper>
-      <LCWrapper>
-        <LittleCircle></LittleCircle>
-        <LittleCircle></LittleCircle>
-        <LittleCircle></LittleCircle>
-      </LCWrapper>
+      <Link to={{ pathname: `/${props.to}` }}>
+        <LCWrapper>
+          <LittleCircle1></LittleCircle1>
+          <LittleCircle2></LittleCircle2>
+          <LittleCircle3></LittleCircle3>
+        </LCWrapper>
+      </Link>
     </Wrapper>
   );
 }
+
+const animation1 = keyframes`
+  0%{transform: translateY(0px);}
+  25%{transform: translateY(-10px);}
+  50%{transform: translateY(0px);}
+  75%{transform: translateY(10px);}
+  100%{transform: translateY(0px);}
+`;
+
+const animation2 = keyframes`
+  0%{transform: translateY(0px);}
+  25%{transform: translateY(10px);}
+  50%{transform: translateY(0px);}
+  75%{transform: translateY(-10px);}
+  100%{transform: translateY(0px);}
+`;
 
 const Wrapper = styled.div`
   width: 80px;
@@ -32,11 +51,37 @@ const LCWrapper = styled.div`
   align-content: center;
 `;
 
-const LittleCircle = styled.div`
+const LittleCircle1 = styled.div`
   width: 15px;
   height: 15px;
   border-radius: 50px;
   background: #669bbc;
   box-shadow: inset 0px 4px 4px rgba(104, 104, 104, 0.35);
   filter: drop-shadow(-1px 1px 5px rgba(0, 0, 0, 0.25));
+
+  ${Wrapper}:hover & {
+    animation: ${animation1} 1s linear infinite;
+  }
+`;
+
+const LittleCircle2 = styled.div`
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+  background: #669bbc;
+  box-shadow: inset 0px 4px 4px rgba(104, 104, 104, 0.35);
+  filter: drop-shadow(-1px 1px 5px rgba(0, 0, 0, 0.25));
+`;
+
+const LittleCircle3 = styled.div`
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+  background: #669bbc;
+  box-shadow: inset 0px 4px 4px rgba(104, 104, 104, 0.35);
+  filter: drop-shadow(-1px 1px 5px rgba(0, 0, 0, 0.25));
+
+  ${Wrapper}:hover & {
+    animation: ${animation2} 1s linear infinite;
+  }
 `;

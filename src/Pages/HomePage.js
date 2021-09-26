@@ -27,14 +27,14 @@ export default function HomePage() {
           <ProductCard number={2} imgUrl={"imgs/cards/pc2.svg"}></ProductCard>
           <ProductCard number={3} imgUrl={"imgs/cards/pc3.svg"}></ProductCard>
         </ProductCardWrapper>
-        <More></More>
+        <More to="products"></More>
 
         <ServiceCardWrapper>
           <ServiceCard number={1} imgUrl={"imgs/cards/sc1.svg"}></ServiceCard>
           <ServiceCard number={2} imgUrl={"imgs/cards/sc2.svg"}></ServiceCard>
           <ServiceCard number={3} imgUrl={"imgs/cards/sc3.svg"}></ServiceCard>
         </ServiceCardWrapper>
-        <More></More>
+        <More to="services"></More>
       </HPContents>
     </Wrapper>
   );
