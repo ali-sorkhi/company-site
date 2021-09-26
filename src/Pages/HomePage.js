@@ -28,6 +28,7 @@ export default function HomePage() {
           <ProductCard number={3} imgUrl={"imgs/cards/pc3.svg"}></ProductCard>
         </ProductCardWrapper>
         <More to="products"></More>
+        <BGimg2 src={"imgs/backgrounds/BG2.svg"}></BGimg2>
 
         <ServiceCardWrapper>
           <ServiceCard number={1} imgUrl={"imgs/cards/sc1.svg"}></ServiceCard>
@@ -48,6 +49,16 @@ const BGimg1 = styled.img`
   height: 2000px;
   left: -461px;
   top: -800px;
+  z-index: -10;
+`;
+
+const BGimg2 = styled.img`
+  position: absolute;
+  filter: saturate(0.6);
+  width: 1500px;
+  height: 2000px;
+  left: -100px;
+  top: 800px;
   z-index: -10;
 `;
 
